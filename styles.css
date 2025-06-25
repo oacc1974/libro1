@@ -1,0 +1,562 @@
+/* Base Styles */
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #546de5;
+    --accent-color: #ff9e7d;
+    --text-color: #333;
+    --light-text: #fff;
+    --background-color: #fff;
+    --section-bg: #f9f9f9;
+    --border-radius: 8px;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* Header/Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: var(--light-text);
+    padding: 100px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--light-text);
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: rotate(2deg);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:hover {
+    background-color: #ff8a6a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Benefit Section */
+.main-benefit {
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.main-benefit h2 {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: var(--secondary-color);
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.benefit-item {
+    padding: 30px 20px;
+    border-radius: var(--border-radius);
+    background-color: var(--section-bg);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* About Book Section */
+.about-book {
+    background-color: var(--section-bg);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: var(--secondary-color);
+}
+
+.about-text ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-text li {
+    margin-bottom: 10px;
+}
+
+/* Book Content Section */
+.book-content {
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.book-content h2 {
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+}
+
+.chapters {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.chapter {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+    background-color: var(--section-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.chapter:hover {
+    transform: translateX(5px);
+}
+
+.chapter-number {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.chapter-details {
+    flex: 1;
+}
+
+.chapter-details h3 {
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: var(--section-bg);
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial {
+    background-color: var(--background-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author-image {
+    margin-right: 15px;
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+
+.author-name {
+    font-weight: 600;
+}
+
+/* Author Section */
+.author {
+    background-color: var(--background-color);
+}
+
+.author-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.author-image {
+    flex-shrink: 0;
+    color: var(--secondary-color);
+}
+
+.author-text {
+    flex: 1;
+}
+
+.author-text h2 {
+    color: var(--secondary-color);
+}
+
+/* Bonus Section */
+.bonus {
+    background-color: var(--section-bg);
+    text-align: center;
+}
+
+.bonus h2 {
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+}
+
+.bonus-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.bonus-item {
+    background-color: var(--background-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.bonus-item:hover {
+    transform: translateY(-5px);
+}
+
+.bonus-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.bonus-item h3 {
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+/* Guarantee Section */
+.guarantee {
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.guarantee-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--section-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.guarantee-content i {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.guarantee-content h2 {
+    color: var(--secondary-color);
+}
+
+/* CTA Final Section */
+.cta-final {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: var(--light-text);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta-final h2 {
+    color: var(--light-text);
+    margin-bottom: 30px;
+}
+
+.price-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.original-price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.current-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.current-price span {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+}
+
+.discount {
+    display: inline-block;
+    background-color: var(--accent-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.cta-button-large {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button-large:hover {
+    background-color: #ff8a6a;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.payment-methods {
+    margin-top: 30px;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.payment-icons i {
+    font-size: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: var(--light-text);
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .author-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .hero {
+        padding: 80px 0 60px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.3rem;
+    }
+    
+    .cta-button-large {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.1rem;
+    }
+    
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .chapter {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .chapter-number {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
