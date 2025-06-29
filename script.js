@@ -47,65 +47,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // Run once on page load
     animateOnScroll();
     
-    // Add countdown timer (optional)
-    const countdownElement = document.createElement('div');
-    countdownElement.className = 'countdown';
-    countdownElement.innerHTML = `
-        <div class="countdown-title">¡Oferta por tiempo limitado!</div>
-        <div class="countdown-timer">
-            <div class="countdown-item">
-                <span id="hours">24</span>
-                <span class="countdown-label">Horas</span>
-            </div>
-            <div class="countdown-item">
-                <span id="minutes">00</span>
-                <span class="countdown-label">Minutos</span>
-            </div>
-            <div class="countdown-item">
-                <span id="seconds">00</span>
-                <span class="countdown-label">Segundos</span>
-            </div>
-        </div>
-    `;
+    // El contador ahora está integrado en el HTML, no necesitamos crearlo dinámicamente
     
-    // Add countdown before the CTA button
-    const priceBox = document.querySelector('.price-box');
-    if (priceBox) {
-        priceBox.parentNode.insertBefore(countdownElement, priceBox);
+    // Countdown functionality
+    function updateCountdown() {
+        let hours = parseInt(document.getElementById('hours').textContent);
+        let minutes = parseInt(document.getElementById('minutes').textContent);
+        let seconds = parseInt(document.getElementById('seconds').textContent);
         
-        // Countdown functionality
-        function updateCountdown() {
-            let hours = parseInt(document.getElementById('hours').textContent);
-            let minutes = parseInt(document.getElementById('minutes').textContent);
-            let seconds = parseInt(document.getElementById('seconds').textContent);
+        seconds--;
+        
+        if (seconds < 0) {
+            seconds = 59;
+            minutes--;
             
-            seconds--;
-            
-            if (seconds < 0) {
-                seconds = 59;
-                minutes--;
+            if (minutes < 0) {
+                minutes = 59;
+                hours--;
                 
-                if (minutes < 0) {
-                    minutes = 59;
-                    hours--;
-                    
-                    if (hours < 0) {
-                        // Reset countdown when it reaches zero
-                        hours = 24;
-                        minutes = 0;
-                        seconds = 0;
-                    }
+                if (hours < 0) {
+                    // Reset countdown when it reaches zero
+                    hours = 24;
+                    minutes = 0;
+                    seconds = 0;
                 }
             }
-            
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
         }
         
-        // Update countdown every second
-        setInterval(updateCountdown, 1000);
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
     }
+    
+    // Update countdown every second
+    setInterval(updateCountdown, 1000);
     
     // Add CSS for countdown
     const style = document.createElement('style');
