@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar EmailJS con tu ID de usuario (deberás registrarte en emailjs.com)
     // Reemplaza 'tu_user_id' con tu ID de usuario real después de registrarte
     (function() {
-        emailjs.init('tu_user_id');
+        emailjs.init('J2A-LlpJKrIAzXaOR');
     })();
 
     // Función para enviar correo electrónico
