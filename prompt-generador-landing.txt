@@ -1,0 +1,61 @@
+# PROMPT PARA GENERAR UNA LANDING PAGE DE VENTA DE LIBRO/EBOOK
+
+Crea una landing page completa y profesional para vender un libro/ebook titulado "[TÍTULO DEL LIBRO]". La landing page debe seguir la estructura y estilo de mi landing page "Haz que te ame siempre", pero adaptada al nuevo título y temática.
+
+## ESTRUCTURA REQUERIDA:
+
+1. **HTML completo** con todas las secciones necesarias, incluyendo:
+   - Head con metadatos, pixel de Facebook y enlaces a CSS
+   - Header con título principal y llamada a la acción
+   - Sección de beneficios/capítulos del libro
+   - Testimonios de clientes
+   - Sección de bonos adicionales
+   - Múltiples llamadas a la acción (CTA)
+   - Contador de urgencia
+   - Garantía de satisfacción
+   - Footer
+
+2. **CSS completo** con estilos modernos y atractivos que incluyan:
+   - Esquema de colores profesional y armonioso
+   - Diseño responsive para móviles y escritorio
+   - Animaciones para botones y elementos destacados
+   - Estilos para testimonios y secciones de beneficios
+
+3. **JavaScript** para:
+   - Contador de tiempo limitado
+   - Seguimiento de eventos con Facebook Pixel
+   - Notificaciones de compra con EmailJS
+
+## ELEMENTOS ESPECÍFICOS A INCLUIR:
+
+- **Título principal**: "[TÍTULO DEL LIBRO]" (usar el título que yo proporcione)
+- **Subtítulo**: Crear un subtítulo persuasivo relacionado con la temática del libro
+- **Imagen de portada**: Incluir marcador de posición para la imagen de portada
+- **Precio**: $9.00 USD con precio tachado original de $37.00 USD
+- **Garantía**: 30 días de garantía de satisfacción
+- **Elementos de urgencia**: Contador de tiempo y mensaje de stock limitado
+- **Testimonios**: 4-6 testimonios ficticios pero realistas
+- **Bonos**: 3-5 bonos gratuitos relacionados con la temática
+- **Llamadas a la acción**: Botones grandes y destacados con texto persuasivo
+
+## CONFIGURACIÓN TÉCNICA:
+
+- **Meta Pixel de Facebook**: Incluir estructura para el pixel (yo actualizaré el ID)
+- **EmailJS**: Mantener la estructura para notificaciones de compra
+- **Enlaces de compra**: Usar placeholder "https://pay.hotmart.com/CODIGO" que yo actualizaré
+- **Fuentes**: Usar Montserrat para texto y Playfair Display para títulos
+- **Iconos**: Incluir Font Awesome para iconos
+
+## OPTIMIZACIÓN:
+
+- **SEO**: Incluir metadatos optimizados para SEO
+- **Velocidad**: Código limpio y optimizado
+- **Conversión**: Elementos psicológicos de persuasión (escasez, urgencia, prueba social)
+
+## EJEMPLO DE USO DEL PROMPT:
+
+"Crea una landing page completa para vender un ebook titulado 'Domina tus Finanzas en 30 Días' siguiendo la estructura de mi landing page anterior."
+
+---
+
+Nota: Este prompt está diseñado para generar una landing page completa y lista para usar. Solo necesitarás personalizar el ID del pixel de Facebook, los enlaces de pago y la imagen de portada para adaptarla a tu producto específico.
