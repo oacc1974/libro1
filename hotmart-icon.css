@@ -1,0 +1,36 @@
+/**
+ * Estilos para aumentar el tamaño del icono de Hotmart
+ */
+
+/* Aumentar el tamaño del icono en los badges de pago seguro */
+.secure-payment-badge img {
+    height: 40px !important; /* Aumentado drásticamente */
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Aumentar el tamaño del icono en el mensaje de pago seguro */
+.secure-payment img {
+    height: 40px !important; /* Aumentado drásticamente */
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Ajustar el tamaño del texto para que coincida mejor con el icono */
+.secure-payment-badge, .secure-payment {
+    font-size: 1.1rem !important;
+    padding: 8px 12px !important;
+    font-weight: 500 !important;
+    background-color: #f8f9fa !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    margin-top: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

@@ -49,38 +49,58 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // El contador ahora está integrado en el HTML, no necesitamos crearlo dinámicamente
     
-    // Countdown functionality
-    function updateCountdown() {
-        let hours = parseInt(document.getElementById('hours').textContent);
-        let minutes = parseInt(document.getElementById('minutes').textContent);
-        let seconds = parseInt(document.getElementById('seconds').textContent);
+    // Countdown functionality with localStorage persistence
+    function initializeCountdown() {
+        // Check if we have an end time stored
+        let countdownEndTime = localStorage.getItem('countdownEndTime');
         
-        seconds--;
-        
-        if (seconds < 0) {
-            seconds = 59;
-            minutes--;
-            
-            if (minutes < 0) {
-                minutes = 59;
-                hours--;
-                
-                if (hours < 0) {
-                    // Reset countdown when it reaches zero
-                    hours = 24;
-                    minutes = 0;
-                    seconds = 0;
-                }
-            }
+        // If no end time exists or it's in the past, create a new one (10 minutes from now)
+        if (!countdownEndTime || new Date(parseInt(countdownEndTime)) <= new Date()) {
+            countdownEndTime = new Date().getTime() + (10 * 60 * 1000); // 10 minutes from now
+            localStorage.setItem('countdownEndTime', countdownEndTime);
         }
         
+        // Initial update of the countdown display
+        updateCountdownDisplay(countdownEndTime);
+        
+        // Return the end time for the interval function
+        return countdownEndTime;
+    }
+    
+    function updateCountdownDisplay(endTime) {
+        // Get current time
+        const now = new Date().getTime();
+        
+        // Calculate remaining time
+        let timeRemaining = endTime - now;
+        
+        // If countdown is finished, reset it
+        if (timeRemaining < 0) {
+            endTime = new Date().getTime() + (10 * 60 * 1000); // 10 minutes from now
+            localStorage.setItem('countdownEndTime', endTime);
+            timeRemaining = endTime - now;
+        }
+        
+        // Calculate hours, minutes, seconds
+        const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+        
+        // Update the display
         document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
         document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
         document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        
+        return endTime;
     }
     
+    // Initialize countdown and get end time
+    const countdownEndTime = initializeCountdown();
+    
     // Update countdown every second
-    setInterval(updateCountdown, 1000);
+    setInterval(function() {
+        updateCountdownDisplay(countdownEndTime);
+    }, 1000);
     
     // Add CSS for countdown
     const style = document.createElement('style');

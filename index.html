@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="hotmart-icon.css">
     
     <!-- Meta Pixel Code -->
     <script>
@@ -23,7 +24,21 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '744297021447366');
-    fbq('track', 'PageView');
+    // Generar un ID único para cada evento
+    function generateEventId() {
+        return 'event_' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15) + '_' + new Date().getTime();
+    }
+    
+    // ID de evento para PageView
+    const pageViewEventId = generateEventId();
+    
+    // Almacenar los IDs de eventos para uso posterior
+    window.fbEventIds = {
+        'PageView': pageViewEventId
+    };
+    
+    // Enviar evento PageView con ID
+    fbq('track', 'PageView', {}, {eventID: pageViewEventId});
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=744297021447366&ev=PageView&noscript=1"
@@ -42,7 +57,12 @@
                     <h1>HAZ QUE TE AME SIEMPRE</h1>
                     <h2>🌹 Recupera la chispa que creías perdida y haz que tu pareja se enamore de ti cada día como la primera vez</h2>
                     <p class="urgency-text">⏰ <strong>NO ESPERES MÁS:</strong> Cada día que pasa sin actuar es un día más de distanciamiento en tu relación</p>
-                    <a href="#comprar" class="cta-button">👉 ADQUIÉRELO AQUÍ AHORA 👈</a>
+                    <div>
+                        <a href="#comprar" class="cta-button">👉 ADQUIÉRELO AQUÍ AHORA 👈</a>
+                        <div class="secure-payment-badge">
+                            <img src="Imagenes/images.png" alt="Logo Hotmart"> Pago 100% seguro con Hotmart
+                        </div>
+                    </div>
                 </div>
                 <div class="hero-image">
                     <img src="Imagenes/3.png" alt="Portada del libro Haz que te ame siempre">
@@ -75,9 +95,14 @@
             </div>
             <div class="cta-mid-section">
                 <p class="last-chance">⏰ No esperes a que sea demasiado tarde - Actúa ahora antes de que tu relación se deteriore más</p>
-                <a href="https://pay.hotmart.com/N100494926W" class="cta-button pulse-button">
-                    <i class="fas fa-shopping-cart"></i> ADQUIÉRELO AQUÍ - SOLUCIÓN INMEDIATA
-                </a>
+                <div>
+                    <a href="https://pay.hotmart.com/N100494926W" class="cta-button pulse-button">
+                        <i class="fas fa-shopping-cart"></i> ADQUIÉRELO AQUÍ - SOLUCIÓN INMEDIATA
+                    </a>
+                    <div class="secure-payment-badge">
+                        <img src="Imagenes/images.png" alt="Logo Hotmart"> Pago 100% seguro con Hotmart
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -365,7 +390,7 @@
             <a href="https://pay.hotmart.com/N100494926W" class="cta-button-large pulse-animation">
                 <i class="fas fa-shopping-cart"></i> ADQUIÉRELO AQUÍ - ACCESO INMEDIATO
             </a>
-            <p class="secure-payment"><i class="fas fa-lock"></i> Pago 100% seguro y protegido</p>
+            <p class="secure-payment"><img src="Imagenes/images.png" alt="Logo Hotmart" style="height: 16px; margin-right: 6px;"> Pago 100% seguro con Hotmart</p>
             <div class="price-box">
                 <div class="original-price">Precio normal: <span>$49.99</span></div>
                 <div class="current-price">💸 Hoy por solo: <span>$9.00</span></div>
@@ -599,6 +624,46 @@
             animation: pulse 2s infinite;
         }
         
+        .secure-payment-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #333;
+            margin-top: 8px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            padding: 4px 8px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .secure-payment-badge img {
+            height: 16px;
+            margin-right: 6px;
+        }
+        
+        .secure-payment-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #333;
+            margin-top: 8px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            padding: 4px 8px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .secure-payment-badge img {
+            height: 16px;
+            margin-right: 6px;
+        }
+        
         @keyframes pulse {
             0% {
                 transform: scale(1);
@@ -620,24 +685,96 @@
             
             buyButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    fbq('track', 'InitiateCheckout');
+                    // Generar ID único para el evento InitiateCheckout
+                    const checkoutEventId = generateEventId();
+                    window.fbEventIds['InitiateCheckout'] = checkoutEventId;
+                    
+                    // Enviar evento con ID
+                    fbq('track', 'InitiateCheckout', {}, {eventID: checkoutEventId});
+                    
+                    // Enviar el evento a la API de conversiones de Facebook
+                    sendToConversionAPI('InitiateCheckout', checkoutEventId, {
+                        value: 9.00,
+                        currency: 'USD'
+                    });
                 });
             });
             
-            // Registrar evento de visualización de contenido
-            fbq('track', 'ViewContent', {
+            // Registrar evento de visualización de contenido con ID
+            const viewContentEventId = generateEventId();
+            window.fbEventIds['ViewContent'] = viewContentEventId;
+            
+            const viewContentData = {
                 content_name: 'Haz que te ame siempre',
                 content_category: 'Ebook',
                 content_ids: ['N100494926W'],
-
                 content_type: 'product',
                 value: 9.00,
                 currency: 'USD'
-            });
+            };
+            
+            // Enviar evento con ID
+            fbq('track', 'ViewContent', viewContentData, {eventID: viewContentEventId});
+            
+            // Enviar el evento a la API de conversiones de Facebook
+            sendToConversionAPI('ViewContent', viewContentEventId, viewContentData);
+            
+            // Función para enviar eventos a la API de conversiones de Facebook
+            function sendToConversionAPI(eventName, eventId, eventData) {
+                // Recopilar datos del usuario de forma discreta
+                const userData = collectUserData();
+                
+                // Preparar los datos para la API
+                const apiData = {
+                    event_name: eventName,
+                    event_id: eventId,
+                    event_time: Math.floor(Date.now() / 1000),
+                    event_source_url: window.location.href,
+                    user_data: userData,
+                    custom_data: eventData
+                };
+                
+                // Enviar los datos a nuestro endpoint
+                fetch('/api/facebook-conversions.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(apiData),
+                    keepalive: true // Asegura que la solicitud se complete incluso si la página se cierra
+                }).catch(error => {
+                    // Manejar errores silenciosamente para no afectar la experiencia del usuario
+                    console.error('Error sending to Conversion API:', error);
+                });
+            }
+            
+            // Función para recopilar datos del usuario de forma discreta
+            function collectUserData() {
+                return {
+                    client_ip_address: null, // Se completará en el servidor
+                    client_user_agent: navigator.userAgent,
+                    em: null, // Se completará en el servidor si está disponible
+                    fbc: getFbp('_fbc'),
+                    fbp: getFbp('_fbp')
+                };
+            }
+            
+            // Función para obtener cookies de Facebook
+            function getFbp(cookieName) {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    let cookie = cookies[i].trim();
+                    if (cookie.indexOf(cookieName + '=') === 0) {
+                        return cookie.substring(cookieName.length + 1);
+                    }
+                }
+                return null;
+            }
         });
     </script>
     <script src="script.js"></script>
     <script src="urgencia-ventas.js"></script>
     <script src="tracking-compras.js"></script>
+    <script src="secure-payment-badge.js"></script>
 </body>
 </html>
