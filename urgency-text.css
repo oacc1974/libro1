@@ -4,28 +4,29 @@
 
 /* Estilo específico para el texto de urgencia principal */
 .urgency-text {
-    background-color: #8B0000 !important; /* Rojo oscuro, menos chillón pero urgente */
-    color: #ffffff !important;
+    background-color: #e74c3c !important; /* Fondo rojo sólido para mejor contraste */
+    color: #ffffff !important; /* Texto blanco para máxima legibilidad */
     padding: 12px 15px !important;
     border-radius: 6px !important;
     margin: 15px 0 !important;
-    font-size: 1.1rem !important;
-    font-weight: 500 !important;
+    font-size: 1.2rem !important; /* Ligeramente más grande */
+    font-weight: 600 !important;
     text-align: center !important;
-    border-left: 5px solid #5c0000 !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+    border-left: 4px solid #c0392b !important; /* Borde más oscuro para profundidad */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important; /* Sombra más pronunciada */
     line-height: 1.5 !important;
     max-width: 95% !important;
     margin-left: auto !important;
     margin-right: auto !important;
     position: relative !important;
-    letter-spacing: 0.3px !important;
+    letter-spacing: 0.5px !important; /* Mayor espaciado entre letras para legibilidad */
 }
 
 /* Estilo para el texto destacado */
 .urgency-text strong {
     font-weight: 700 !important;
-    color: #FFD700 !important; /* Dorado para destacar */
+    color: #FFD700 !important; /* Dorado para destacar sobre fondo rojo */
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2) !important; /* Sombra sutil para mejorar legibilidad */
 }
 
 /* Animación sutil de pulsación para llamar la atención */
