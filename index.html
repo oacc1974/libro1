@@ -6,13 +6,20 @@
     <title>HAZ QUE TE AME SIEMPRE - El libro que transformará tu relación</title>
     <!-- Meta tag para verificación de dominio de Facebook -->
     <meta name="facebook-domain-verification" content="EAAJXG5cL45ABPMriDB5ZAQOV9fzqZCHviWb4MQfDAyZCw2tt3R5ZCGGkzLmjJ2Mx4CjUr3zrwPSNifsdkCZCrFh4ZCZAtavS3QUUpl8SDChxvavhln5iN9asqccPOKSQmbqFZCSi5z3l9sbAwQLKyV7gSKp7FUdSYvmVHZAgH9hQZC7WaDEZCvT9H18vPVeiGZCtZChLF3gZDZD" />
-    <link rel="stylesheet" href="styles.css">
+    <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="hotmart-icon.css">
     <link rel="stylesheet" href="urgency-text.css">
+    <link rel="stylesheet" href="new-styles.css">
+    <link rel="stylesheet" href="secure-badge.css">
+    <link rel="stylesheet" href="hero-features.css">
+    <link rel="stylesheet" href="cta-centered.css">
+    <link rel="stylesheet" href="about-book.css">
     
     <!-- Meta Pixel Code -->
     <script>
@@ -50,23 +57,76 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header Section con Contador -->
     <header class="hero">
+        <div class="oferta-banner">
+            <p>🔥 OFERTA ESPECIAL POR TIEMPO LIMITADO 🔥</p>
+        </div>
         <div class="container">
+            <!-- Contador al inicio -->
+            <div class="countdown-header">
+                <p class="countdown-title">⚠️ ATENCIÓN: Esta oferta especial expira en:</p>
+                <div class="countdown-container">
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="minutes">10</div>
+                        <div class="countdown-label">Minutos</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Segundos</div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>HAZ QUE TE AME SIEMPRE</h1>
-                    <h2>🌹 Recupera la chispa que creías perdida y haz que tu pareja se enamore de ti cada día como la primera vez</h2>
-                    <p class="urgency-text">⏰ <strong>NO ESPERES MÁS:</strong> Cada día que pasa sin actuar es un día más de distanciamiento en tu relación</p>
-                    <div>
-                        <a href="#comprar" class="cta-button">👉 VER OFERTA ESPECIAL 👈</a>
-                        <div class="secure-payment-badge">
-                            <img src="Imagenes/images.png" alt="Logo Hotmart"> Pago 100% seguro con Hotmart
+                    <h2>💖 Transforma tu relación y recupera el amor apasionado en solo 7 días</h2>
+                    <p class="hero-subtitle">Descubre el método probado que ha salvado más de 3,500 relaciones al borde de la ruptura</p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                            <div class="feature-text">
+                                <div class="feature-title">Reconquista su corazón</div>
+                                <div class="feature-description">Haz que vuelva a mirarte con deseo y admiración</div>
+                            </div>
                         </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-fire"></i></div>
+                            <div class="feature-text">
+                                <div class="feature-title">Reaviva la pasión</div>
+                                <div class="feature-description">Técnicas comprobadas para recuperar la chispa perdida</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-comment-dots"></i></div>
+                            <div class="feature-text">
+                                <div class="feature-title">Mejora la comunicación</div>
+                                <div class="feature-description">Transforma los conflictos en conexión íntima</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="feature-text">
+                                <div class="feature-title">Protege tu relación</div>
+                                <div class="feature-description">Evita los errores que destruyen el amor</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-primary">
+                        <a href="#precio-especial" class="cta-button pulse-animation">👉 QUIERO TRANSFORMAR MI RELACIÓN AHORA 👈</a>
+                        <div class="secure-payment-badge">
+                            <img src="Imagenes/images.png" alt="Logo Hotmart"> Pago 100% seguro con Hotmart</div>
                     </div>
                 </div>
                 <div class="hero-image">
                     <img src="Imagenes/3.png" alt="Portada del libro Haz que te ame siempre">
+                    <div class="social-proof">
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>4.9/5 (87 valoraciones)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,30 +135,62 @@
     <!-- Main Benefit Section -->
     <section class="main-benefit">
         <div class="container">
-            <h2>📝 Transforma tu relación y recupera el amor que mereces:</h2>
+            <h2>🔥 DESCUBRE LOS SECRETOS PARA TRANSFORMAR TU RELACIÓN</h2>
+            <p class="benefit-subtitle">Identifica cuál de estos problemas está afectando tu relación y descúbrelo en nuestro método:</p>
+            
             <div class="benefits-list">
                 <div class="benefit-item problem-item">
-                    <i class="fas fa-heart-broken"></i>
-                    <p><strong>¿Sientes que tu pareja ya no te mira como antes?</strong> Recupera su admiración y deseo en solo 7 días, sin tener que rogar por su atención.</p>
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Distanciamiento emocional</h3>
+                        <p><strong>¿Sientes que tu pareja ya no te mira como antes?</strong> Descubre las 3 claves psicológicas para recuperar su admiración y deseo en solo 7 días, sin tener que rogar por su atención.</p>
+                    </div>
                 </div>
+                
                 <div class="benefit-item problem-item">
-                    <i class="fas fa-fire-alt"></i>
-                    <p><strong>¿La pasión se ha apagado?</strong> Vuelve a sentir esas mariposas en el estómago con 5 técnicas que harán que tu pareja no pueda resistirse a ti.</p>
+                    <div class="benefit-icon">
+                        <i class="fas fa-fire-alt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Pérdida de pasión</h3>
+                        <p><strong>¿La pasión se ha apagado?</strong> Aprende 5 técnicas probadas que harán que tu pareja vuelva a sentir esas mariposas en el estómago y no pueda resistirse a ti.</p>
+                    </div>
                 </div>
+                
                 <div class="benefit-item problem-item">
-                    <i class="fas fa-bomb"></i>
-                    <p><strong>¿Las discusiones son cada vez más frecuentes?</strong> Transforma los conflictos en conversaciones íntimas que fortalecerán vuestra conexión como nunca antes.</p>
+                    <div class="benefit-icon">
+                        <i class="fas fa-comment-slash"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Comunicación rota</h3>
+                        <p><strong>¿Las discusiones son cada vez más frecuentes?</strong> Domina el método de comunicación transformadora que convierte los conflictos en conversaciones íntimas que fortalecen vuestra conexión.</p>
+                    </div>
                 </div>
+                
                 <div class="benefit-item problem-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <p><strong>¿Tu pareja prefiere el celular antes que pasar tiempo contigo?</strong> Haz que deje todo lo que está haciendo solo para estar contigo, sin tener que pedírselo.</p>
+                    <div class="benefit-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Falta de atención</h3>
+                        <p><strong>¿Tu pareja prefiere el celular antes que pasar tiempo contigo?</strong> Aprende las técnicas de atracción magnética que harán que deje todo lo que está haciendo solo para estar contigo.</p>
+                    </div>
                 </div>
             </div>
+            
             <div class="cta-mid-section">
-                <p class="last-chance">⏰ No esperes a que sea demasiado tarde - Actúa ahora antes de que tu relación se deteriore más</p>
+                <div class="countdown-reminder-horizontal">
+                    <p>⚠️ Esta oferta especial expira en:</p>
+                    <div class="countdown-inline">
+                        <span id="minutes-benefit">10</span>:<span id="seconds-benefit">00</span>
+                    </div>
+                </div>
+                
                 <div>
                     <a href="https://pay.hotmart.com/N100494926W" class="cta-button pulse-button">
-                        <i class="fas fa-shopping-cart"></i> ADQUIÉRELO AQUÍ - SOLUCIÓN INMEDIATA
+                        <i class="fas fa-unlock-alt"></i> DESBLOQUEAR ACCESO INMEDIATO
                     </a>
                     <div class="secure-payment-badge">
                         <img src="Imagenes/images.png" alt="Logo Hotmart"> Pago 100% seguro con Hotmart
@@ -114,59 +206,153 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>Descubre cómo hacer que te ame sin pedirlo</h2>
-                    <p class="highlight-text">"Haz que te ame siempre" <strong>NO es solo un libro</strong> - es tu camino para volver a sentir ese amor apasionado del principio, con resultados visibles en menos de 7 días o te devolvemos tu dinero.</p>
+                    <p class="highlight-text">"Haz que te ame siempre" NO es solo un libro - es tu camino para volver a sentir ese amor apasionado del principio, con resultados visibles en menos de 7 días o te devolvemos tu dinero.</p>
                     <p>Desarrollado tras analizar más de 1,000 casos reales de parejas al borde de la ruptura, este método ha salvado ya más de 3,500 relaciones que parecían imposibles de recuperar.</p>
-                    <p>Este libro te permitirá:</p>
-                    <ul>
-                        <li>Recuperar la mirada de deseo y admiración que tu pareja tenía al principio</li>
-                        <li>Transformar la rutina en momentos mágicos que fortalecerán vuestro vínculo</li>
-                        <li>Convertirte en la prioridad número uno en la vida de tu pareja</li>
-                        <li>Disfrutar de conversaciones profundas que os conecten emocionalmente</li>
-                        <li>Hacer que tu relación vuelva a sentirse como al inicio, pero con la solidez del tiempo</li>
-                    </ul>
+                    <div class="about-features">
+                        <p><i class="fas fa-heart"></i> Recuperar la mirada de deseo y admiración que tu pareja tenía al principio</p>
+                        <p><i class="fas fa-heart"></i> Transformar la rutina en momentos mágicos que fortalecerán vuestro vínculo</p>
+                        <p><i class="fas fa-heart"></i> Convertirte en la prioridad número uno en la vida de tu pareja</p>
+                        <p><i class="fas fa-heart"></i> Disfrutar de conversaciones profundas que os conecten emocionalmente</p>
+                        <p><i class="fas fa-heart"></i> Hacer que tu relación vuelva a sentirse como al inicio, pero con la solidez del tiempo</p>
+                    </div>
+                </div>
+                <!-- Imagen eliminada -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Nueva sección de transformación de relaciones -->
+    <section class="transformation-section">
+        <div class="container">
+            <div class="section-header">
+                <h2> Transforma tu relación y recupera el amor que mereces</h2>
+            </div>
+            
+            <div class="transformation-cards">
+                <div class="transformation-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>¿Sientes que tu pareja ya no te mira como antes?</h3>
+                        <p>Recupera su admiración y deseo en solo 7 días, sin tener que rogar por su atención.</p>
+                    </div>
+                </div>
+                
+                <div class="transformation-card">
+                    <div class="card-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>¿La pasión se ha apagado?</h3>
+                        <p>Vuelve a sentir esas mariposas en el estómago con 5 técnicas que harán que tu pareja no pueda resistirse a ti.</p>
+                    </div>
+                </div>
+                
+                <div class="transformation-card">
+                    <div class="card-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>¿Las discusiones son cada vez más frecuentes?</h3>
+                        <p>Transforma los conflictos en conversaciones íntimas que fortalecerán vuestra conexión como nunca antes.</p>
+                    </div>
+                </div>
+                
+                <div class="transformation-card">
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>¿Tu pareja prefiere el celular antes que pasar tiempo contigo?</h3>
+                        <p>Haz que deje todo lo que está haciendo solo para estar contigo, sin tener que pedírselo.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="transformation-cta">
+                <p class="urgency-message"> No esperes a que sea demasiado tarde - Actúa ahora antes de que tu relación se deteriore más</p>
+                <a href="https://pay.hotmart.com/N100494926W" class="cta-button-large pulse-animation">
+                    ADQUIÉRELO AQUÍ - SOLUCIÓN INMEDIATA
+                </a>
+                <div class="secure-payment">
+                    <img src="Imagenes/images.png" alt="Logo Hotmart" style="height: 20px; margin-right: 8px;"> Pago 100% seguro con Hotmart
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Book Content Section -->
-    <section class="book-content">
+    <!-- Sección Cómo funciona -->
+    <section class="how-it-works" id="como-funciona">
         <div class="container">
-            <h2>¿Cómo transformará tu relación este libro?</h2>
-            <div class="chapters">
-                <div class="chapter">
-                    <div class="chapter-number">1</div>
-                    <div class="chapter-details">
+            <div class="section-header">
+                <h2>¿Cómo transformará tu relación este libro?</h2>
+                <div class="section-underline"></div>
+            </div>
+            
+            <div class="transformation-steps">
+                <div class="transformation-step">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
                         <h3>Crea una relación a prueba de crisis</h3>
+                    </div>
+                    <div class="step-content">
                         <p>Construye una base tan sólida que ni el tiempo ni los problemas podrán debilitar el amor que sienten el uno por el otro.</p>
+                        <div class="step-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="chapter">
-                    <div class="chapter-number">2</div>
-                    <div class="chapter-details">
+                
+                <div class="transformation-step">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
                         <h3>Haz que te escuche y te entienda sin discutir</h3>
+                    </div>
+                    <div class="step-content">
                         <p>Domina las palabras exactas que harán que tu pareja se abra emocionalmente y quiera compartir todo contigo.</p>
+                        <div class="step-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="chapter">
-                    <div class="chapter-number">3</div>
-                    <div class="chapter-details">
+                
+                <div class="transformation-step">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
                         <h3>Recupera la pasión que sentían al principio</h3>
+                    </div>
+                    <div class="step-content">
                         <p>Descubre los 3 disparadores emocionales que harán que tu pareja te desee intensamente, como en los primeros días.</p>
+                        <div class="step-icon">
+                            <i class="fas fa-fire-alt"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="chapter">
-                    <div class="chapter-number">4</div>
-                    <div class="chapter-details">
+                
+                <div class="transformation-step">
+                    <div class="step-header">
+                        <div class="step-number">4</div>
                         <h3>Convierte cada discusión en una oportunidad</h3>
+                    </div>
+                    <div class="step-content">
                         <p>Transforma los momentos de tensión en experiencias que os acerquen más y fortalezcan vuestro amor.</p>
+                        <div class="step-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="chapter">
-                    <div class="chapter-number">5</div>
-                    <div class="chapter-details">
+                
+                <div class="transformation-step">
+                    <div class="step-header">
+                        <div class="step-number">5</div>
                         <h3>Haz que quiera construir un futuro contigo</h3>
+                    </div>
+                    <div class="step-content">
                         <p>Inspira a tu pareja a soñar juntos y a verte como la persona con quien quiere compartir el resto de su vida.</p>
+                        <div class="step-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -206,7 +392,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Botón eliminado para dejar solo 3 botones de compra -->
+            <!-- Botón eliminado para evitar duplicación -->
         </div>
     </section>
 
@@ -285,7 +471,19 @@
                 </div>
             </div>
             
-            <!-- Botón eliminado para dejar solo 3 botones de compra -->
+            <div class="testimonial-cta">
+                <p class="testimonial-cta-text">Estas son solo algunas de las miles de personas que han transformado su relación gracias a este libro. <strong>¡Tú puedes ser la siguiente!</strong></p>
+                <div class="countdown-reminder">
+                    <p>⚠️ Esta oferta expira en:</p>
+                    <div class="countdown-inline">
+                        <span id="minutes-testimonial">10</span>:<span id="seconds-testimonial">00</span>
+                    </div>
+                </div>
+                <a href="https://pay.hotmart.com/N100494926W" class="cta-button-large pulse-animation">
+                    <i class="fas fa-heart"></i> ADQUIRIR AHORA POR SOLO $9
+                </a>
+                <p class="secure-payment"><img src="Imagenes/images.png" alt="Logo Hotmart" style="height: 16px; margin-right: 6px;"> Pago 100% seguro con Hotmart</p>
+            </div>
         </div>
     </section>
 
@@ -306,7 +504,7 @@
                     <p>Únete a nuestra comunidad de lectores para compartir experiencias y recibir apoyo.</p>
                 </div>
             </div>
-            <!-- Botón eliminado para dejar solo 3 botones de compra -->
+            <!-- Botón eliminado para evitar duplicación -->
         </div>
     </section>
 
@@ -336,50 +534,55 @@
                     <p class="regalo-destacado">¡Un valor de $29.99 que recibes SIN COSTO ADICIONAL!</p>
                 </div>
             </div>
-            <!-- Botón eliminado para dejar solo 3 botones de compra -->
+            <!-- Botón eliminado para evitar duplicación -->
         </div>
     </section>
 
-    <!-- CTA Final Section -->
-    <section class="cta-final" id="comprar">
+    <!-- Sección de Precio Especial -->
+    <section class="pricing-section" id="precio-especial">
         <div class="container">
-            <h2>¿Tu relación está en PELIGRO? Actúa AHORA</h2>
-            <p class="offer-text">⚠️ ÚLTIMA OPORTUNIDAD - Esta oferta expira cuando el contador llegue a CERO</p>
-            <div class="risk-warning">
-                <p>Cada día que pasa sin solucionar tus problemas de pareja:</p>
-                <ul class="risk-list">
-                    <li><i class="fas fa-times-circle"></i> Aumenta un 37% la probabilidad de ruptura</li>
-                    <li><i class="fas fa-times-circle"></i> Se reduce la atracción y el deseo entre ustedes</li>
-                    <li><i class="fas fa-times-circle"></i> Se forman resentimientos más difíciles de superar</li>
-                </ul>
+            <div class="pricing-header">
+                <h2>🔥 OFERTA ESPECIAL POR TIEMPO LIMITADO 🔥</h2>
+                <p class="pricing-subtitle">Recupera el amor de tu pareja con nuestro método probado de 7 días</p>
             </div>
-            <div class="countdown-container">
-                <div class="countdown-box">
-                    <div class="countdown-number" id="hours">23</div>
-                    <div class="countdown-label">Horas</div>
+            
+            <div class="price-box-simple">
+                <div class="price-comparison">
+                    <div class="price-item">
+                        <span class="price-label">Precio normal:</span>
+                        <span class="original-price">$49.99</span>
+                    </div>
+                    <div class="price-item highlight">
+                        <span class="price-label">Hoy por solo:</span>
+                        <span class="current-price">$9.00</span>
+                    </div>
                 </div>
-                <div class="countdown-box">
-                    <div class="countdown-number" id="minutes">58</div>
-                    <div class="countdown-label">Minutos</div>
+                <div class="discount-badge">¡82% DE DESCUENTO!</div>
+                
+                <div class="features-list">
+                    <p><i class="fas fa-check-circle"></i> Acceso inmediato al libro digital</p>
+                    <p><i class="fas fa-check-circle"></i> Bonos exclusivos valorados en $99</p>
+                    <p><i class="fas fa-check-circle"></i> Acceso de por vida a actualizaciones</p>
+                    <p><i class="fas fa-check-circle"></i> Soporte prioritario por 30 días</p>
                 </div>
-                <div class="countdown-box">
-                    <div class="countdown-number" id="seconds">45</div>
-                    <div class="countdown-label">Segundos</div>
+                
+                <div class="countdown-reminder">
+                    <p>⚠️ Esta oferta expira en:</p>
+                    <div class="countdown-inline">
+                        <span id="minutes-inline">10</span>:<span id="seconds-inline">00</span>
+                    </div>
+                </div>
+                
+                <a href="https://pay.hotmart.com/N100494926W" class="cta-button-large pulse-animation">
+                    <i class="fas fa-shopping-cart"></i> ADQUIRIR AHORA POR SOLO $9
+                </a>
+                
+                <div class="guarantee-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <p>Garantía de satisfacción 100% o devolución</p>
                 </div>
             </div>
-            <a href="https://pay.hotmart.com/N100494926W" class="cta-button-large pulse-animation">
-                <i class="fas fa-shopping-cart"></i> ADQUIÉRELO AQUÍ - ACCESO INMEDIATO
-            </a>
-            <p class="secure-payment"><img src="Imagenes/images.png" alt="Logo Hotmart" style="height: 16px; margin-right: 6px;"> Pago 100% seguro con Hotmart</p>
-            <div class="price-box">
-                <div class="original-price">Precio normal: <span>$49.99</span></div>
-                <div class="current-price">💸 Hoy por solo: <span>$9.00</span></div>
-                <div class="discount">¡80% de descuento!</div>
-            </div>
-            <div class="guarantee-badge">
-                <i class="fas fa-shield-alt"></i>
-                <p>💯 Garantía de satisfacción o te devolvemos tu dinero.</p>
-            </div>
+            
             <div class="payment-methods">
                 <p>Métodos de pago aceptados:</p>
                 <div class="payment-icons">
@@ -388,264 +591,113 @@
                     <i class="fab fa-cc-amex"></i>
                     <i class="fab fa-cc-paypal"></i>
                 </div>
+                <p class="secure-payment"><img src="Imagenes/images.png" alt="Logo Hotmart" style="height: 16px; margin-right: 6px;"> Pago 100% seguro con Hotmart</p>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
+    
+    <!-- Sección Final de Urgencia -->
+    <section class="urgency-final">
         <div class="container">
-            <p>&copy; 2025 Haz que te ame siempre. Todos los derechos reservados.</p>
+            <div class="urgency-box">
+                <div class="urgency-header">
+                    <h2>⚠️ ÚLTIMA OPORTUNIDAD ⚠️</h2>
+                    <p class="urgency-subtitle">Esta oferta especial de <span class="highlight-price">$9</span> termina cuando el contador llegue a cero</p>
+                </div>
+                
+                <div class="urgency-timer">
+                    <p>Tiempo restante:</p>
+                    <div class="countdown-inline final-countdown">
+                        <span id="minutes-final">10</span>:<span id="seconds-final">00</span>
+                    </div>
+                </div>
+                
+                <div class="urgency-price">
+                    <div class="price-tag">
+                        <span class="price-was">Antes: $49.99</span>
+                        <span class="price-now">Ahora: $9.00</span>
+                        <span class="price-save">Ahorras: $40.99</span>
+                    </div>
+                </div>
+                
+                <div class="final-cta">
+                    <a href="https://pay.hotmart.com/N100494926W" class="cta-button-large pulse-animation">
+                        <i class="fas fa-heart"></i> ADQUIRIR AHORA POR SOLO $9
+                    </a>
+                    <p class="secure-payment"><img src="Imagenes/images.png" alt="Logo Hotmart" style="height: 16px; margin-right: 6px;"> Pago 100% seguro con Hotmart</p>
+                </div>
+            </div>
         </div>
-    </footer>
-
+    </section>
     
     <style>
-        .urgency-text {
-            color: #e74c3c;
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-            background-color: rgba(231, 76, 60, 0.1);
-            padding: 10px 15px;
-            border-radius: 5px;
-            border-left: 4px solid #e74c3c;
+        /* Estilos para notificaciones de compra */
+        .notificaciones-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
         }
-        
-        .highlight {
-            background-color: #ffeb3b;
-            color: #000;
-            padding: 2px 5px;
-            font-weight: 700;
-        }
-        
-        .problem-item {
-            border-left: 4px solid #e74c3c;
-        }
-        
-        .last-chance {
-            font-weight: 600;
-            color: #e74c3c;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            background-color: rgba(231, 76, 60, 0.1);
-            padding: 10px 15px;
-            border-radius: 5px;
-            border-left: 4px solid #e74c3c;
-            display: inline-block;
-        }
-        
-        .highlight-text {
-            font-size: 1.2rem;
-            line-height: 1.5;
-        }
-        
-        .stock-warning {
-            background-color: #fff3cd;
-            border: 1px solid #ffeeba;
-            color: #856404;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .stock-warning i {
-            margin-right: 10px;
-            font-size: 1.5rem;
-        }
-        
-        .bonus-timer {
-            color: #ff3a3a;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        
-        .risk-warning {
-            background-color: #f8d7da;
-            border: 1px solid #f5c6cb;
-            color: #721c24;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            text-align: left;
-        }
-        
-        .risk-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 10px;
-        }
-        
-        .risk-list li {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .risk-list i {
-            color: #dc3545;
-            margin-right: 10px;
-        }
-        
-        /* Estilos para los nuevos testimonios impactantes */
-        .testimonials-extended {
-            background-color: #f9f9f9;
-            padding: 60px 0;
-        }
-        
-        .testimonial-intro {
-            text-align: center;
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            color: #555;
-        }
-        
-        .testimonial-extended {
+        .notificacion-compra {
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .testimonial-before-after {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial-before, .testimonial-after {
-            flex: 1;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #2ecc71;
             padding: 15px;
-            border-radius: 8px;
-        }
-        
-        .testimonial-before {
-            background-color: #f8d7da;
-            border-left: 5px solid #dc3545;
-        }
-        
-        .testimonial-after {
-            background-color: #d4edda;
-            border-left: 5px solid #28a745;
-        }
-        
-        .testimonial-before h4, .testimonial-after h4 {
-            margin-top: 0;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            max-width: 300px;
+            transform: translateX(-120%);
+            transition: transform 0.3s ease;
+        }
+        .notificacion-compra.mostrar {
+            transform: translateX(0);
+        }
+        .notificacion-compra i {
+            color: #2ecc71;
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        .notificacion-compra p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        .cerrar-notificacion {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #999;
         }
         
-        .testimonial-before h4 {
-            color: #721c24;
-        }
-        
-        .testimonial-after h4 {
-            color: #155724;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .testimonial-image {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #ff6b6b, #ff4757);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(255, 71, 87, 0.3);
-        }
-        
-        .testimonial-image i {
-            font-size: 28px;
-            color: white;
-        }
-        
-        .testimonial-badge {
-            background-color: #28a745;
-            color: white;
-            font-size: 0.8rem;
-            padding: 3px 8px;
-            border-radius: 20px;
-            display: inline-flex;
-            align-items: center;
-            margin-top: 5px;
-            font-weight: bold;
-        }
-        
-        .testimonial-badge i {
-            margin-left: 5px;
-        }
-        
-        .testimonial-stars {
-            color: #ffc107;
-            font-size: 1.2rem;
-            margin-top: 5px;
-        }
-        
-        @media (max-width: 768px) {
-            .testimonial-before-after {
-                flex-direction: column;
+        /* Animación de urgencia para el contador */
+        @keyframes urgent-pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
             }
         }
         
-        .secure-payment {
-            color: #28a745;
-            font-weight: 600;
-            margin-top: 15px;
+        .urgent-pulse {
+            animation: urgent-pulse 1s infinite;
         }
         
-        .pulse-button {
-            animation: pulse 2s infinite;
-        }
-        
-        .pulse-animation {
-            animation: pulse 2s infinite;
-        }
-        
-        .secure-payment-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            color: #333;
-            margin-top: 8px;
-            background-color: #f8f9fa;
-            border-radius: 4px;
-            padding: 4px 8px;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .secure-payment-badge img {
-            height: 16px;
-            margin-right: 6px;
-        }
-        
-        .secure-payment-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            color: #333;
-            margin-top: 8px;
-            background-color: #f8f9fa;
-            border-radius: 4px;
-            padding: 4px 8px;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
+        .expired-message {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
         
         .secure-payment-badge img {

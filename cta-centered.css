@@ -1,0 +1,83 @@
+/* Estilos para centrar la sección CTA con cuenta regresiva */
+.cta-mid-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.countdown-reminder-horizontal {
+    background-color: #ffebee;
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    border: 1px solid #ffcdd2;
+}
+
+.countdown-reminder-horizontal p {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    color: #e53935;
+    font-size: 1rem;
+}
+
+.countdown-inline {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e53935;
+}
+
+.cta-button.pulse-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 15px auto;
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    min-width: 280px;
+}
+
+.cta-button.pulse-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(46, 204, 113, 0.5);
+}
+
+.cta-button.pulse-button i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .countdown-reminder-horizontal {
+        padding: 12px 15px;
+        max-width: 90%;
+    }
+    
+    .countdown-inline {
+        font-size: 1.5rem;
+    }
+    
+    .cta-button.pulse-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+        min-width: 260px;
+    }
+}

@@ -1,22 +1,116 @@
-// Script para crear urgencia y mejorar conversiones
+// Script para crear urgencia y mejorar conversiones con nuevo diseño
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. Modificar todos los botones de compra restantes
-    const botonesCompra = document.querySelectorAll('.cta-button:not(.pulse-button)');
+    // 1. Implementar contador de 10 minutos
+    const minutesElement = document.getElementById('minutes');
+    const secondsElement = document.getElementById('seconds');
+    const minutesInlineElement = document.getElementById('minutes-inline');
+    const secondsInlineElement = document.getElementById('seconds-inline');
+    const minutesFinalElement = document.getElementById('minutes-final');
+    const secondsFinalElement = document.getElementById('seconds-final');
+    const minutesTestimonialElement = document.getElementById('minutes-testimonial');
+    const secondsTestimonialElement = document.getElementById('seconds-testimonial');
+    const minutesBenefitElement = document.getElementById('minutes-benefit');
+    const secondsBenefitElement = document.getElementById('seconds-benefit');
     
-    botonesCompra.forEach(boton => {
-        // Cambiar el texto y añadir clase de animación
-        boton.innerHTML = '<i class="fas fa-shopping-cart"></i> ADQUIÉRELO AQUÍ - ANTES QUE SE AGOTE';
-        boton.classList.add('pulse-button');
+    let totalSeconds = 10 * 60; // 10 minutos en segundos
+    
+    function updateCountdown() {
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        const minutesStr = minutes.toString().padStart(2, '0');
+        const secondsStr = seconds.toString().padStart(2, '0');
         
-        // Añadir mensaje de advertencia antes de cada botón
-        const ctaSection = boton.closest('.cta-mid-section');
-        if (ctaSection) {
-            const advertencia = document.createElement('div');
-            advertencia.className = 'stock-warning';
-            advertencia.innerHTML = '<i class="fas fa-exclamation-triangle"></i><p>¡ADVERTENCIA! Solo quedan <span class="highlight">7 copias</span> disponibles al precio promocional</p>';
-            ctaSection.insertBefore(advertencia, boton);
+        // Actualizar el contador principal
+        if (minutesElement) {
+            minutesElement.textContent = minutesStr;
         }
-    });
+        if (secondsElement) {
+            secondsElement.textContent = secondsStr;
+        }
+        
+        // Actualizar el contador inline en la sección de precios
+        if (minutesInlineElement) {
+            minutesInlineElement.textContent = minutesStr;
+        }
+        if (secondsInlineElement) {
+            secondsInlineElement.textContent = secondsStr;
+        }
+        
+        // Actualizar el contador final
+        if (minutesFinalElement) {
+            minutesFinalElement.textContent = minutesStr;
+        }
+        if (secondsFinalElement) {
+            secondsFinalElement.textContent = secondsStr;
+        }
+        
+        // Actualizar el contador en la sección de testimonios
+        if (minutesTestimonialElement) {
+            minutesTestimonialElement.textContent = minutesStr;
+        }
+        if (secondsTestimonialElement) {
+            secondsTestimonialElement.textContent = secondsStr;
+        }
+        
+        // Actualizar el contador en la sección de beneficios
+        if (minutesBenefitElement) {
+            minutesBenefitElement.textContent = minutesStr;
+        }
+        if (secondsBenefitElement) {
+            secondsBenefitElement.textContent = secondsStr;
+        }
+        
+        // Efecto de urgencia cuando queden menos de 5 minutos
+        if (totalSeconds <= 300) {
+            document.querySelectorAll('.countdown-number, .countdown-inline').forEach(el => {
+                el.style.color = '#e74c3c';
+            });
+        }
+        
+        // Efecto de urgencia extrema cuando queden menos de 2 minutos
+        if (totalSeconds <= 120) {
+            document.querySelectorAll('.countdown-box, .countdown-inline, .final-countdown').forEach(el => {
+                el.classList.add('urgent-pulse');
+            });
+            
+            // Añadir efecto de pulso al contador de testimonios
+            if (minutesTestimonialElement && secondsTestimonialElement) {
+                const testimonialCountdownContainer = minutesTestimonialElement.closest('.countdown-inline');
+                if (testimonialCountdownContainer) {
+                    testimonialCountdownContainer.classList.add('urgent-pulse');
+                }
+            }
+            
+            // Añadir efecto de pulso al contador de beneficios
+            if (minutesBenefitElement && secondsBenefitElement) {
+                const benefitCountdownContainer = minutesBenefitElement.closest('.countdown-inline');
+                if (benefitCountdownContainer) {
+                    benefitCountdownContainer.classList.add('urgent-pulse');
+                }
+                
+                // Añadir efecto visual a todo el contenedor de countdown horizontal
+                const countdownReminderHorizontal = benefitCountdownContainer?.closest('.countdown-reminder-horizontal');
+                if (countdownReminderHorizontal) {
+                    countdownReminderHorizontal.style.backgroundColor = '#f8d7da';
+                    countdownReminderHorizontal.style.borderColor = '#f5c6cb';
+                    countdownReminderHorizontal.style.boxShadow = '0 0 10px rgba(220, 53, 69, 0.5)';
+                }
+            }
+        }
+        
+        if (totalSeconds > 0) {
+            totalSeconds--;
+            setTimeout(updateCountdown, 1000);
+        } else {
+            // Cuando el contador llega a cero
+            document.querySelectorAll('.countdown-container, .countdown-reminder, .urgency-timer').forEach(el => {
+                el.innerHTML = '<div class="expired-message">OFERTA EXPIRADA</div>';
+            });
+        }
+    }
+    
+    // Iniciar el contador
+    updateCountdown();
     
     // 2. Añadir notificaciones de compras recientes
     const notificaciones = [
@@ -48,27 +142,29 @@ document.addEventListener('DOMContentLoaded', function() {
         
         notificacionesContainer.appendChild(notificacionElement);
         
-        // Animar entrada
+        // Mostrar la notificación con animación
         setTimeout(() => {
             notificacionElement.classList.add('mostrar');
-        }, 100);
-        
-        // Configurar cierre de notificación
-        const cerrarBtn = notificacionElement.querySelector('.cerrar-notificacion');
-        cerrarBtn.addEventListener('click', () => {
-            notificacionElement.classList.remove('mostrar');
+            
+            // Configurar el botón de cerrar
+            const cerrarBtn = notificacionElement.querySelector('.cerrar-notificacion');
+            if (cerrarBtn) {
+                cerrarBtn.addEventListener('click', () => {
+                    notificacionElement.classList.remove('mostrar');
+                    setTimeout(() => {
+                        notificacionElement.remove();
+                    }, 300);
+                });
+            }
+            
+            // Ocultar automáticamente después de 5 segundos
             setTimeout(() => {
-                notificacionElement.remove();
-            }, 300);
-        });
-        
-        // Auto-cerrar después de 5 segundos
-        setTimeout(() => {
-            notificacionElement.classList.remove('mostrar');
-            setTimeout(() => {
-                notificacionElement.remove();
-            }, 300);
-        }, 5000);
+                notificacionElement.classList.remove('mostrar');
+                setTimeout(() => {
+                    notificacionElement.remove();
+                }, 300);
+            }, 5000);
+        }, 300);
         
         // Avanzar al siguiente índice
         indiceNotificacion = (indiceNotificacion + 1) % notificaciones.length;

@@ -1,0 +1,53 @@
+/* Estilos unificados para badges de pago seguro */
+.secure-payment-badge, .secure-payment {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 10px auto !important;
+    background-color: #f8f9fa !important;
+    border-radius: 50px !important;
+    padding: 8px 15px !important;
+    color: #34495e !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid #e0e0e0 !important;
+    transition: all 0.3s ease !important;
+    max-width: fit-content !important;
+    position: relative !important;
+}
+
+.secure-payment-badge:hover, .secure-payment:hover {
+    background-color: #ffffff !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12) !important;
+}
+
+.secure-payment-badge img, .secure-payment img {
+    height: 18px !important;
+    margin-right: 8px !important;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2)) !important;
+}
+
+/* Estilo específico para el badge en la sección de precios */
+.payment-methods .secure-payment {
+    margin-top: 15px !important;
+}
+
+/* Estilo específico para el badge en todas las secciones */
+.hero .secure-payment-badge,
+.main-benefit .secure-payment-badge,
+.payment-methods .secure-payment {
+    background-color: #f8f9fa !important;
+    border: 1px solid #e0e0e0 !important;
+    color: #34495e !important;
+    border-radius: 50px !important;
+    padding: 8px 15px !important;
+}
+
+/* Estilo para el icono de Hotmart */
+.secure-payment-badge img, .secure-payment img {
+    height: 18px !important;
+    width: auto !important;
+    margin-right: 8px !important;
+}

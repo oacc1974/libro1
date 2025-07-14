@@ -1,0 +1,83 @@
+/* Estilos para la sección About Book sin imagen */
+.about-book {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-text {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.highlight-text {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.about-text p {
+    color: #34495e;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.about-features {
+    margin-top: 30px;
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-features p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.about-features i {
+    color: #e74c3c;
+    margin-right: 15px;
+    font-size: 1.1rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .about-book {
+        padding: 50px 0;
+    }
+    
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .highlight-text {
+        font-size: 1.1rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    .about-features {
+        padding: 0 15px;
+    }
+}
