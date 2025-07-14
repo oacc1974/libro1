@@ -9,6 +9,19 @@
     display: block;
 }
 
+/* Ajuste para la imagen del libro en dispositivos móviles */
+@media (max-width: 768px) {
+    .hero-image img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image img {
+        max-width: 100%;
+    }
+}
+
 /* Imágenes principales */
 .about-image img, .testimonial img, .regalo-image img, .transformation-image img {
     max-width: 50%;
