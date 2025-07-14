@@ -1,0 +1,50 @@
+/* Reducción del tamaño de gráficos principales en un 50% */
+
+/* Imagen del libro principal en el hero */
+.hero-image img {
+    max-width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Imágenes principales */
+.about-image img, .testimonial img, .regalo-image img, .transformation-image img {
+    max-width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Imágenes de testimonios */
+.testimonial-image img {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Imágenes de sección de regalo */
+.regalo-content img {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Imágenes de transformación */
+.transformation-section img {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Imágenes en secciones de beneficios */
+.benefit-section img, .main-benefit img {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .about-image img, .testimonial img, .regalo-image img, .transformation-image img {
+        max-width: 70%;
+    }
+}

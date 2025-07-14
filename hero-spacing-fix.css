@@ -1,0 +1,79 @@
+/* Ajustes para reducir el espacio excesivo en la sección hero */
+
+/* Reducir el espacio entre el contador y el contenido del hero */
+.countdown-header {
+    padding: 15px 0 5px;
+    margin-bottom: 10px;
+}
+
+/* Ajustar el espacio en el contenido del hero */
+.hero-content {
+    padding: 0;
+}
+
+/* Reducir márgenes en el texto del hero */
+.hero-text h1 {
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    margin-bottom: 15px;
+}
+
+/* Ajustar el espacio para las características del hero */
+.hero-features {
+    margin: 20px 0;
+}
+
+/* Reducir el padding general del hero */
+.hero {
+    padding: 0 0 30px 0;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .countdown-header {
+        padding: 10px 0 0;
+        margin-bottom: 5px;
+    }
+    
+    .hero-content {
+        padding: 0;
+    }
+    
+    .hero-text h1 {
+        margin-top: 5px;
+    }
+    
+    .hero-features {
+        margin: 15px 0;
+    }
+    
+    .hero {
+        padding: 0 0 20px 0;
+    }
+}
+
+/* Ajustes para dispositivos muy pequeños */
+@media (max-width: 480px) {
+    .countdown-box {
+        min-width: 80px;
+        padding: 8px;
+    }
+    
+    .countdown-number {
+        font-size: 2rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.8rem;
+    }
+    
+    .hero-text h1 {
+        margin-top: 0;
+    }
+}

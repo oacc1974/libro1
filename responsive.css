@@ -1,0 +1,145 @@
+/* Estilos responsivos generales */
+
+/* Dispositivos medianos (tablets, 768px y superior) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.6rem !important;
+    }
+    
+    h3 {
+        font-size: 1.2rem !important;
+    }
+    
+    p {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    .cta-button {
+        padding: 12px 20px !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .highlight-text {
+        font-size: 1rem !important;
+    }
+    
+    .secure-payment-badge, .secure-payment {
+        font-size: 0.8rem !important;
+        padding: 6px 12px !important;
+    }
+}
+
+/* Dispositivos pequeños (teléfonos móviles, 576px y inferior) */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    h2 {
+        font-size: 1.4rem !important;
+    }
+    
+    h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    p {
+        font-size: 0.9rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem !important;
+    }
+    
+    .cta-button {
+        padding: 10px 18px !important;
+        font-size: 0.9rem !important;
+        min-width: 220px !important;
+    }
+    
+    .countdown-inline {
+        font-size: 1.3rem !important;
+    }
+    
+    .countdown-reminder-horizontal p {
+        font-size: 0.9rem !important;
+    }
+    
+    .benefit-content h3 {
+        font-size: 1rem !important;
+    }
+    
+    .benefit-content p {
+        font-size: 0.85rem !important;
+    }
+    
+    .feature-title {
+        font-size: 0.9rem !important;
+    }
+    
+    .feature-description {
+        font-size: 0.8rem !important;
+    }
+    
+    .about-features i {
+        font-size: 0.9rem !important;
+    }
+    
+    section {
+        padding: 40px 0 !important;
+    }
+    
+    .hero-features {
+        padding: 15px !important;
+    }
+    
+    .feature-icon {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+/* Ajustes específicos para dispositivos muy pequeños */
+@media (max-width: 375px) {
+    h1 {
+        font-size: 1.6rem !important;
+    }
+    
+    h2 {
+        font-size: 1.3rem !important;
+    }
+    
+    .cta-button {
+        min-width: 200px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .countdown-inline {
+        font-size: 1.2rem !important;
+    }
+    
+    .hero-features {
+        margin: 20px 0 !important;
+        gap: 10px !important;
+    }
+    
+    .feature-item {
+        padding: 10px 8px !important;
+    }
+    
+    .feature-icon {
+        width: 35px !important;
+        height: 35px !important;
+        margin-bottom: 8px !important;
+    }
+}
